@@ -24,5 +24,8 @@ Variáveis em Ruby podem ser declaradas das seguintes formas:
   idade_do_personagem = "20"
 ```
 
+### Receber informações do usuário
+Para guardar uma informação recebida pelo usuário, ou seja, um input, utiliza-se a função `gets()`. Caso seja necessário ignorar o *"Enter"* pressionado ao final do input, utiliza-se a função `gets.chomp()`.
+
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
