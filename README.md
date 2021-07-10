@@ -6,7 +6,7 @@ Aprendendo Ruby por meio de vídeos tutoriais.
 - [Começando o estudo](#começando-o-estudo)
   
 ## O que é Ruby?
-A linguagem Ruby é ...
+A linguagem Ruby é uma linguagem dinâmica, *open source* com foco na simplicidade e na produtividade. Tem uma sintaxe elegante de leitura natural e fácil escrita. O criador da linguagem Ruby é Yukihiro "Matz" Matsumoto.
 
 ## Começando o estudo.
 
@@ -27,5 +27,9 @@ Variáveis em Ruby podem ser declaradas das seguintes formas:
 ### Receber informações do usuário
 Para guardar uma informação recebida pelo usuário, ou seja, um input, utiliza-se a função `gets()`. Caso seja necessário ignorar o *"Enter"* pressionado ao final do input, utiliza-se a função `gets.chomp()`.
 
+**Importante:**
+- Quando colocamos alguma informação em Ruby usando ***gets***, Ruby converterá a informação para ***string*** automáticamente.
+
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
+- Ruby. **Documentação**. Disponível em: https://www.ruby-lang.org/pt/documentation/
