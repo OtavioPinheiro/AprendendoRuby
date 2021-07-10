@@ -30,6 +30,21 @@ Para guardar uma informação recebida pelo usuário, ou seja, um input, utiliza
 **Importante:**
 - Quando colocamos alguma informação em Ruby usando ***gets***, Ruby converterá a informação para ***string*** automáticamente.
 
+### Converter para inteiro ou para float
+- Para converter uma ***string*** ou um ***float*** para inteiro usamos o `.to_i`.
+<br>**Exemplo:**
+  <pre><code>
+  num_txt = "50"
+  num = num_txt.to_i
+  </code></pre>
+
+- Para converter uma ***string*** para float usamos o `.to_f`.
+<br>**Exemplo:**
+  <pre><code>
+  num_txt = "50.55"
+  num = num_txt.to_f
+  </code></pre>
+
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
 - Ruby. **Documentação**. Disponível em: https://www.ruby-lang.org/pt/documentation/
