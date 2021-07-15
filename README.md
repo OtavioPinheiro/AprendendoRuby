@@ -50,34 +50,97 @@ Collections (coleções), na programação, representa um conjunto de dados seme
 Tipos de collections:
 - **Arrays**
   - Declaração:
-  **Exemplo:** `estados = []`
-  Cria um array vazio.
-  - Adicionando elementos no final do array:
-  **Exemplo:** `estados.push("São Paulo")`
-    - Múltiplos elementos:
-  **Exemplo:** `estados.push('Minas Gerais', 'Rio Grande do Sul', 'Bahia', 'Espírito Santo')`
+  `estados = []`. Cria um array vazio.
+  - Adicionando elementos no final do array: `estados.push("São Paulo")`
+    - Múltiplos elementos: `estados.push('Minas Gerais', 'Rio Grande do Sul', 'Bahia', 'Espírito Santo')`
   - Adicionando elementos no ínicio do array:
-  **Exemplo:** `estados.insert(0, 'Acre', 'Amapá')`
-  Na função insert é necessário informar qual o índice que se deseja adicionar os elementos e em seguida informar quais os elementos.
+    `estados.insert(0, 'Acre', 'Amapá')`
+    <br>**OBS.:** Na função insert é necessário informar qual o índice que se deseja adicionar os elementos e em seguida informar quais os elementos.
   - Acessando os elementos:
   Basta informar o índice do elemento desejado. **Exemplo:** `estados[2]`
   - Edição:
   Para editar o conteúdo de um dos elementos do array, basta informar o índice do elemento e sobrescrevê-lo.
   **Exemplo:**`estados[3] = Paraná`
     - Intervalos:
-  Pode-se trabalhar com intervalos com os arrays. **Exemplo:** `estados[0..5]`
+  Pode-se trabalhar com intervalos com os *arrays*. **Exemplo:** `estados[0..5]`
   - Funções úteis:
-    - `estados.first` seleciona o primeiro elemento do array e `estados.last` seleciona o último elemento do array.
+    - `estados.first` seleciona o primeiro elemento do *array* e `estados.last` seleciona o último elemento do array.
     - `estados.count` conta os elementos do array.
     - `estados.empty?` verifica se o array está vazio, se estiver retorna *true*, senão *false*.
     - `estados.include?('São Paulo')` verifica se no array há o elemento São Paulo, se estiver retorna *true*, senão retornará *false*.
   - Deletar elementos:
-    - `estados.delete_at(2)` -> irá deletar o elemento que está na posição 2 do array.
-    - `estados.pop` -> irá remover o último elemento do array.
-    - `estados.shift` -> irá deletar o primeiro elemento do array.
+    - `estados.delete_at(2)`. Irá deletar o elemento que está na posição 2 do array.
+    - `estados.pop`. Irá remover o último elemento do array.
+    - `estados.shift`. Irá deletar o primeiro elemento do array.
 - **Hashes**
+  A diferença entre *Hashes* e *Arrays* é quando se trata de *Hash*, não acessamos os elementos passando o índice e sim passando o valor, assim como são os dicionários em Python ou os JSON em JavaScript.
   - Declaração:
+    - `capitais = Hash.new` ou `capitais = {}`
+  - Atribuição:
+    - `capitais = {acre: 'Rio Branco', sao_paulo: 'São Paulo'}`
+  - Adicionando novos elementos:
+    - `capitais[:minas_gerais] = "Belo Horizonte"`
+  - Funções úteis:
+    - Exibir todos os valores: `capitais.values`
+    - Exibir todas as chaves: `capitais.keys`
+    - Selecionar um elemento: `capitais[:sao_paulo]`
+    - Contar a quantidade de elementos: `capitais.size`
+    - Verificar se está vazio: `capitais.empty?`
+  - Deletar um elemento:
+    - `capitais.delete(:acre)`
+- **Iterações em Collections**
+  - **EACH:**
+    - Percorre uma coleção de forma parecida ao ***for***, não sobrescrevendo o valor de variáveis fora da estrutura de repetição. **Exemplo:**
+    ```rb
+    nomes = ["Gleissicléia", "Marium", "Tomtom"]
+    
+    nome = "John John"
+
+    nomes.each do |nome|
+      puts nome + ' é o meu nome.'
+    end
+
+    puts nome
+    ```
+
+    ```rb
+    aulas = {'Aula 1' => 'ok', 'Aula 2' => 'ok',
+    'Aula 3' => 'ok', 'Aula 4' => 'ok', 'Aula 5' => 'nok'}
+
+    aulas.each do |key, value|
+      puts "#{key} #{value}"
+    end
+    ```
+
+  - **MAP:**
+    - Cria um array baseando-se em valores de outro array existente. **Exemplo:**
+    ```rb
+    puts "\n Executando .map multiplicando cada item por 2"
+    # .map não altera o conteúdo do array original
+    new_array = array.map do |a|
+      a * 2
+    end
+
+    puts "\n Array Original"
+    puts "#{array}"
+
+    puts "\n Novo Array"
+    puts "#{new_array}"
+
+    puts "\n Executando .map! Multiplicando cada item por 2"
+    # .map! força o conteúdo do array original seja alterado
+    array.map! do |a|
+      a * 2
+    end
+
+    puts "\n Array Original"
+    puts " #{new_array}"
+    puts ''
+    ```
+  - **SELECT:**
+    - Realiza uma seleção de elementos presentes em uma collection através de uma condição pré definida. Traz como resultado somente os valores que passam nesta condição. **Exemplo:**
 
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
 - Ruby. **Documentação**. Disponível em: https://www.ruby-lang.org/pt/documentation/
+- Leonardo Scorza. **Curso de Ruby**. Disponível em: https://www.youtube.com/playlist?list=PLdDT8if5attEOcQGPHLNIfnSFiJHhGDOZ
