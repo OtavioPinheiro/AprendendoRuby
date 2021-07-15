@@ -66,8 +66,15 @@ Tipos de collections:
   **Exemplo:**`estados[3] = Paraná`
     - Intervalos:
   Pode-se trabalhar com intervalos com os arrays. **Exemplo:** `estados[0..5]`
-  - Atalhos:
-  `estados.first` seleciona o primeiro elemento do array e `estados.last` seleciona o último elemento do array.
+  - Funções úteis:
+    - `estados.first` seleciona o primeiro elemento do array e `estados.last` seleciona o último elemento do array.
+    - `estados.count` conta os elementos do array.
+    - `estados.empty?` verifica se o array está vazio, se estiver retorna *true*, senão *false*.
+    - `estados.include?('São Paulo')` verifica se no array há o elemento São Paulo, se estiver retorna *true*, senão retornará *false*.
+  - Deletar elementos:
+    - `estados.delete_at(2)` -> irá deletar o elemento que está na posição 2 do array.
+    - `estados.pop` -> irá remover o último elemento do array.
+    - `estados.shift` -> irá deletar o primeiro elemento do array.
 - **Hashes**
   - Declaração:
 
