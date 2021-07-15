@@ -139,6 +139,26 @@ Tipos de collections:
     ```
   - **SELECT:**
     - Realiza uma seleção de elementos presentes em uma collection através de uma condição pré definida. Traz como resultado somente os valores que passam nesta condição. **Exemplo:**
+    ```rb
+    array = [1, 2, 3, 4, 5, 6]
+
+    selection = array.select do |a|
+      a >= 4
+    end
+
+    puts selection
+    ```
+
+    ```rb
+    hash = {0 => 'zero', 1 => 'um', 2 => 'dois', 3 => 'três'}
+
+    puts 'Selecionando keys com valor maior que 0'
+    selection_key = hash.select do |key, value|
+      key > 0 #pode substituir por true ou false
+    end
+
+    puts selection_key
+    ```
 
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
