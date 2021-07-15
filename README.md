@@ -45,6 +45,9 @@ Para guardar uma informação recebida pelo usuário, ou seja, um input, utiliza
   num = num_txt.to_f
   </code></pre>
 
+### Collections
+Collections (coleções), na programação, representa um conjunto de dados semelhantes em uma única unidade.
+
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
 - Ruby. **Documentação**. Disponível em: https://www.ruby-lang.org/pt/documentation/
