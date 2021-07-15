@@ -47,6 +47,29 @@ Para guardar uma informação recebida pelo usuário, ou seja, um input, utiliza
 
 ### Collections
 Collections (coleções), na programação, representa um conjunto de dados semelhantes em uma única unidade.
+Tipos de collections:
+- **Arrays**
+  - Declaração:
+  **Exemplo:** `estados = []`
+  Cria um array vazio.
+  - Adicionando elementos no final do array:
+  **Exemplo:** `estados.push("São Paulo")`
+    - Múltiplos elementos:
+  **Exemplo:** `estados.push('Minas Gerais', 'Rio Grande do Sul', 'Bahia', 'Espírito Santo')`
+  - Adicionando elementos no ínicio do array:
+  **Exemplo:** `estados.insert(0, 'Acre', 'Amapá')`
+  Na função insert é necessário informar qual o índice que se deseja adicionar os elementos e em seguida informar quais os elementos.
+  - Acessando os elementos:
+  Basta informar o índice do elemento desejado. **Exemplo:** `estados[2]`
+  - Edição:
+  Para editar o conteúdo de um dos elementos do array, basta informar o índice do elemento e sobrescrevê-lo.
+  **Exemplo:**`estados[3] = Paraná`
+    - Intervalos:
+  Pode-se trabalhar com intervalos com os arrays. **Exemplo:** `estados[0..5]`
+  - Atalhos:
+  `estados.first` seleciona o primeiro elemento do array e `estados.last` seleciona o último elemento do array.
+- **Hashes**
+  - Declaração:
 
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
