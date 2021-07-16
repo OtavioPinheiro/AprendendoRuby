@@ -49,6 +49,7 @@ Para guardar uma informação recebida pelo usuário, ou seja, um input, utiliza
   </code></pre>
 
 ## Condicionais
+Tipo de estrutura de controle que executa um trecho de código dependendo do resultado de uma condição.
 - ***If:*** Expressão que verifica se uma condição é verdadeira e, a partir desse resultado, determina se as instruções dentro do seu corpo serão ou não executadas.
   **Exemplo:**
   ```rb
@@ -121,6 +122,45 @@ Para guardar uma informação recebida pelo usuário, ou seja, um input, utiliza
     puts "Você nasceu na segunda metade do ano"
   else
     puts "Não foi possível identificar"
+  end
+  ```
+
+## Iterações
+Tipo de estrutura de controle que gerencia quantas vezes um trecho de código será executado.
+- ***For:*** Usado para percorrer uma coleção de elementos.
+  **Exemplo:**
+  ```rb
+  frutas = ["morango", "uva", "maracujá", "kiwi"]
+
+  for fruta in frutas
+    puts fruta
+  end
+  ```
+- ***While:*** Instrução que repete um bloco de código enquanto sua condição for verdadeira.
+  **Exemplo:**
+  ```rb
+  x = 1
+
+  while x < 10
+    puts x
+    x += 1
+  end
+  ```
+- ***Times:*** Executa uma repetição por um determinado número de vezes.
+  **Exemplo:**
+  ```rb
+  10.times do
+    puts "olá"
+  end
+  ```
+- ***Do/While:*** Ele cria um laço de repetição que só é parado quando encontra uma instrução *break*.
+  **Exemplo:**
+  ```rb
+  contador = 1
+  loop do
+    puts contador
+    break if contador == 10
+    contador += 1
   end
   ```
 
