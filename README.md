@@ -8,29 +8,32 @@ Aprendendo Ruby por meio de vídeos tutoriais.
 ## O que é Ruby?
 A linguagem Ruby é uma linguagem dinâmica, *open source* com foco na simplicidade e na produtividade. Tem uma sintaxe elegante de leitura natural e fácil escrita. O criador da linguagem Ruby é Yukihiro "Matz" Matsumoto.
 
-## Começando o estudo.
+## Executando...
+Para executar programas em Ruby usa-se o comando:
+```
+ruby arquivo.rb
+```
 
-### Regras da linguagem
+## Regras da linguagem
 1. Ruby não faz converção automática para string quando usamos as funções `puts` e `print`, ou seja, se quero exibir um número na tela concatenado com um texto, devo **transformá-lo em string primeiro**.
 2. Operações matemáticas envolvendo dois números inteiros (int), sempre retornará um número inteiro. Operações matemáticas envolvendo dois números flutuantes (float), sempre retornará um número flutuante. E operações matemáticas envolvendo um número inteiro e um número flutuante, o resultado será apresentado como número flutuante.
 
-### Boas práticas
+## Boas práticas
 1. Normalmente é utilizado o padrão snake case para nomear variáveis. Exemplo: `nome_do_cachorrinho`
 
-### Variáveis
+## Variáveis
 Variáveis em Ruby podem ser declaradas das seguintes formas:
 ```
   nome_do_personagem = "Snow"
   idade_do_personagem = "20"
 ```
-
-### Receber informações do usuário
+## Receber informações do usuário
 Para guardar uma informação recebida pelo usuário, ou seja, um input, utiliza-se a função `gets()`. Caso seja necessário ignorar o *"Enter"* pressionado ao final do input, utiliza-se a função `gets.chomp()`.
 
 **Importante:**
 - Quando colocamos alguma informação em Ruby usando ***gets***, Ruby converterá a informação para ***string*** automáticamente.
 
-### Converter para inteiro ou para float
+## Converter para inteiro ou para float
 - Para converter uma ***string*** ou um ***float*** para inteiro usamos o `.to_i`.
 <br>**Exemplo:**
   <pre><code>
@@ -45,7 +48,83 @@ Para guardar uma informação recebida pelo usuário, ou seja, um input, utiliza
   num = num_txt.to_f
   </code></pre>
 
-### Collections
+## Condicionais
+- ***If:*** Expressão que verifica se uma condição é verdadeira e, a partir desse resultado, determina se as instruções dentro do seu corpo serão ou não executadas.
+  **Exemplo:**
+  ```rb
+  dia = "domingo"
+
+  if dia == "domingo"
+    almoco = "churrasco"
+  end
+
+  puts "O almoço de hoje é #{almoco}!"
+  ```
+- ***Else:*** Informa o que fazer quando a condição de uma instrução *if* for falsa.
+  **Exemplo:**
+  ```rb
+  dia = "segunda-feira"
+
+  if dia == "domingo"
+    almoco = "churrasco"
+  else
+    almoco = "normal"
+  end
+
+  puts "O almoço de hoje é #{almoco}!"
+  ```
+- ***Elsif:*** Utilizado quando há a necessidade de verificar mais de uma condição em um *if*.
+  **Exemplo:**
+  ```rb
+  dia = "sexta-feira"
+
+  if dia == "domingo"
+    almoco = "churrasco"
+    janta = "churrasco"
+  elsif dia == "sexta-feira"
+    almoco = "normal"
+    janta = "pizza"
+  else
+    almoco = "normal"
+    janta = almoco
+  end
+
+  puts "O almoço de hoje é #{almoco}!"
+  puts "A janta de hoje é #{janta}!"
+  ```
+- ***Unless:*** É executado quando a condição for falsa, ou seja, é uma expressão que verifica se uma condição é falsa.
+  **Exemplo:**
+  ```rb
+  dia = "sábado"
+
+  unless dia == "domingo"
+    almoco = "normal"
+  end
+
+  puts "O almoço de hoje é #{almoco}!"
+  ```
+- ***Case:*** Semelhante ao *if*. Usado em situações com diversas condições.
+  **Exemplo:**
+  ```rb
+  puts "Digite o número dos mês em que você nasceu:"
+
+  mes = gets.chomp.to_i
+
+  case mes
+  when 1..3
+    puts "Você nasceu no começo do ano"
+  when 9..12
+    puts "Você nasceu no final do ano"
+  when 4..6
+    puts "Você nasceu na primeira metade do ano"
+  when 7..9
+    puts "Você nasceu na segunda metade do ano"
+  else
+    puts "Não foi possível identificar"
+  end
+  ```
+
+## Collections
 Collections (coleções), na programação, representa um conjunto de dados semelhantes em uma única unidade.
 Tipos de collections:
 - **Arrays**
