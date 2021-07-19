@@ -305,8 +305,7 @@ hello "Flávia"
 
   signal
   
-  # color = "verde"
-  color = ""
+  color = "verde"
   signal(color)
   ```
 - Se o método possuir a palavra reservada `return`, então o método (ou função) encerrará a execução e retornará um valor.
