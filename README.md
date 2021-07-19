@@ -5,7 +5,7 @@ Aprendendo Ruby por meio de vídeos tutoriais.
 - [O que é Ruby?](#o-que-é-ruby)
 - [Começando o estudo](#começando-o-estudo)
   
-## O que é Ruby?
+# O que é Ruby?
 A linguagem Ruby é uma linguagem dinâmica, *open source* com foco na simplicidade e na produtividade. Tem uma sintaxe elegante de leitura natural e fácil escrita. O criador da linguagem Ruby é Yukihiro "Matz" Matsumoto.
 
 ## Executando...
@@ -18,22 +18,22 @@ ruby arquivo.rb
 1. Ruby não faz converção automática para string quando usamos as funções `puts` e `print`, ou seja, se quero exibir um número na tela concatenado com um texto, devo **transformá-lo em string primeiro**.
 2. Operações matemáticas envolvendo dois números inteiros (int), sempre retornará um número inteiro. Operações matemáticas envolvendo dois números flutuantes (float), sempre retornará um número flutuante. E operações matemáticas envolvendo um número inteiro e um número flutuante, o resultado será apresentado como número flutuante.
 
-## Boas práticas
+# Boas práticas
 1. Normalmente é utilizado o padrão snake case para nomear variáveis. Exemplo: `nome_do_cachorrinho`
 
-## Variáveis
+# Variáveis
 Variáveis em Ruby podem ser declaradas das seguintes formas:
 ```
   nome_do_personagem = "Snow"
   idade_do_personagem = "20"
 ```
-## Receber informações do usuário
+# Receber informações do usuário
 Para guardar uma informação recebida pelo usuário, ou seja, um input, utiliza-se a função `gets()`. Caso seja necessário ignorar o *"Enter"* pressionado ao final do input, utiliza-se a função `gets.chomp()`.
 
 **Importante:**
 - Quando colocamos alguma informação em Ruby usando ***gets***, Ruby converterá a informação para ***string*** automáticamente.
 
-## Converter para inteiro ou para float
+# Converter para inteiro ou para float
 - Para converter uma ***string*** ou um ***float*** para inteiro usamos o `.to_i`.
 <br>**Exemplo:**
   <pre><code>
@@ -48,7 +48,7 @@ Para guardar uma informação recebida pelo usuário, ou seja, um input, utiliza
   num = num_txt.to_f
   </code></pre>
 
-## Condicionais
+# Condicionais
 Tipo de estrutura de controle que executa um trecho de código dependendo do resultado de uma condição.
 - ***If:*** Expressão que verifica se uma condição é verdadeira e, a partir desse resultado, determina se as instruções dentro do seu corpo serão ou não executadas.
   **Exemplo:**
@@ -125,7 +125,7 @@ Tipo de estrutura de controle que executa um trecho de código dependendo do res
   end
   ```
 
-## Iterações
+# Iterações
 Tipo de estrutura de controle que gerencia quantas vezes um trecho de código será executado.
 - ***For:*** Usado para percorrer uma coleção de elementos.
   **Exemplo:**
@@ -164,7 +164,7 @@ Tipo de estrutura de controle que gerencia quantas vezes um trecho de código se
   end
   ```
 
-## Collections
+# Collections
 Collections (coleções), na programação, representa um conjunto de dados semelhantes em uma única unidade.
 Tipos de collections:
 - **Arrays**
@@ -232,7 +232,9 @@ Tipos de collections:
     ```
 
   - **MAP:**
-    - Cria um array baseando-se em valores de outro array existente. **Exemplo:**
+    - Cria um array baseando-se em valores de outro array existente.
+
+    **Exemplo:**
     ```rb
     puts "\n Executando .map multiplicando cada item por 2"
     # .map não altera o conteúdo do array original
@@ -279,7 +281,82 @@ Tipos de collections:
     puts selection_key
     ```
 
+# Métodos
+Métodos são uma forma de organizar instruções em um programa, permitindo que trechos de códigos sejam reutilizados.
+
+**Exemplo:**
+```rb
+def hello(name)
+  puts "Olá #{name}"
+end
+
+hello "Leonardo"
+hello "Flávia"
+```
+**Observações:**
+- É necessário chamar o método para que ele seja executado.
+- É possível atribuir a função parâmetros não obrigatórios. Então caso o método seja chamado e nenhum parâmetro seja passado a ele, ele utilizará o valor padrão.
+  
+  **Exemplo:**
+  ```rb
+  def signal(color = 'vermelho')
+    puts "O sinal está #{color}"
+  end
+
+  signal
+  
+  # color = "verde"
+  color = ""
+  signal(color)
+  ```
+- Se o método possuir a palavra reservada `return`, então o método (ou função) encerrará a execução e retornará um valor.
+  
+# Gems
+Gem é um pacote que oferece funcionalidades a fim de resolver uma necessidade específica de um programa Ruby. Pense como o conceito de biblioteca em outras linguagens de programação.
+
+**Exemplo:**
+- Abrir o terminal e digitar o seguinte comando:
+  `gem install os`
+- Utilizando o pacote `os` baixado:
+  ```rb
+  require 'os'
+
+  def my_os
+    if OS.windows?
+      "Windows"
+    elsif OS.linux?
+      "Linux"
+    elsif OS.mac?
+      "Osx"
+    else
+      "Não consegui identificar"
+    end
+  end
+
+  puts "Meu PC possui #{OS.cpu_count} cores, é #{OS.bits} bits e o sistema operacional é #{my_os}"
+  ```
+- Para remover o pacote (`os`) em Ruby (gem), basta executar o seguinte comando: `gem uninstall os`
+  
+**Observações:**
+- Para listar todas as *gems* instaladas no sistema operacional, basta executar o seguinte comando: `gem list`
+- Em Ruby não é comum instalar gem a gem, para isso utiliza-se um *bundler*, que é responsável por instalar todas as *gems* necessárias. Como usar:
+  - Crie uma pasta: `mkdir projeto_exemplo`;
+  - Instale o *bundler* como uma gem: `gem install bundler`;
+  - Crie um arquivo chamado **Gemfile**;
+  - Dentro do arquivo Gemfile coloque as informações:
+    ```rb
+    source 'https://rubygems.org'
+
+    gem 'os'
+    ```
+    Neste arquivo colocamos a fonte (o local) da onde a gem será baixada e em seguida informamos o nome da gem a ser baixada.
+  - Após colocar as informações no arquivo sobre as *gems* que serão baixadas, acessar a pasta criada `projeto_exemplo` pelo terminal e, em seguida, ainda pelo terminal, inserir o comando `bundle`.
+- Sites onde pode-se encontrar gems:
+  - https://rubygems.org
+  - https://github.com/rdp
+
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
 - Ruby. **Documentação**. Disponível em: https://www.ruby-lang.org/pt/documentation/
 - Leonardo Scorza. **Curso de Ruby**. Disponível em: https://www.youtube.com/playlist?list=PLdDT8if5attEOcQGPHLNIfnSFiJHhGDOZ
+- Ruby Documentation. **Documentação Ruby**. Disponível em: https://www.rubydoc.info/
