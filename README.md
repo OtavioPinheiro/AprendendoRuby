@@ -382,6 +382,29 @@ Gem é um pacote que oferece funcionalidades a fim de resolver uma necessidade e
   puts computador.desliga
   ```
 
+  ```rb
+  class Animal
+    def pular
+      puts 'pula pula pula'
+    end
+
+    def dormir
+      puts 'zZz'
+    end
+  end
+
+  class Cachorro < Animal
+    def latir
+      puts 'AU AU'
+    end
+  end
+
+  cachorro = Cachorro.new
+  cachorro.pular
+  cachorro.dormir
+  cachorro.latir
+  ```
+
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
 - Ruby. **Documentação**. Disponível em: https://www.ruby-lang.org/pt/documentation/
