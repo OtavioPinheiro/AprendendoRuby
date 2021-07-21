@@ -367,6 +367,7 @@ Gem é um pacote que oferece funcionalidades a fim de resolver uma necessidade e
   
 ## Classes em Ruby
 - **Exemplos:**
+  - Declaração:
   ```rb
   class Computador
     def liga
@@ -382,6 +383,7 @@ Gem é um pacote que oferece funcionalidades a fim de resolver uma necessidade e
   puts computador.desliga
   ```
 
+  - Herança
   ```rb
   class Animal
     def pular
@@ -403,6 +405,44 @@ Gem é um pacote que oferece funcionalidades a fim de resolver uma necessidade e
   cachorro.pular
   cachorro.dormir
   cachorro.latir
+  ```
+
+  - Polimorfismo
+  ```rb
+  class Instrumento
+    def escrever
+      puts 'Escrevendo'
+    end
+  end
+
+  class Teclado < Instrumento
+    def escrever
+      puts "Teclado"
+      super #chama o método pai
+  end
+
+  class Lapis < Instrumento
+    def escrever
+      puts 'Escrevendo à Lápis'
+    end
+  end
+
+  class Caneta < Instrumento
+    def escrever
+      puts 'Escrevendo à Caneta'
+    end
+  end
+
+  teclado = Teclado.new
+  lapis = Lapis.new
+  caneta = Caneta.new
+
+  puts "Lápis: "
+  lapis.escrever
+  puts "Caneta: "
+  caneta.escrever
+  puts "Teclado: "
+  teclado.escrever
   ```
 
 # Referências
