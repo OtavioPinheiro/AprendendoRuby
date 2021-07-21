@@ -357,6 +357,10 @@ Gem é um pacote que oferece funcionalidades a fim de resolver uma necessidade e
 # Programação Orientada a Objeto
 É um paradigma de programação criado para lidar com softwares grandes e complexos. É um conceito seguido não só pelo Ruby, mas também por várias outras linguagens de programação como Java, Python, C++, etc.
 
+## Pilares (POO)
+- Abstração: Ação de abstrair uma entidade do mundo real e transformá-la em uma classe.
+- Encapsulamento: Ato de dividir o programa em várias partes tornando-o mais flexível, fácil de modificar e incluir novas funcionalidades.
+
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
 - Ruby. **Documentação**. Disponível em: https://www.ruby-lang.org/pt/documentation/
