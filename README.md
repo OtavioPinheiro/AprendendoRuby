@@ -364,6 +364,23 @@ Gem é um pacote que oferece funcionalidades a fim de resolver uma necessidade e
 - Polimorfismo: Capacidade de utilizar um método de diferentes formas para diferentes Objetos.
 - Classe: É uma estrutura que abstrai um conjunto de objetos com características similares. Uma classe determina o comportamento de seus objetos (através de métodos) e os estados possíveis destes objetos por meio de atributos.
 - Objeto: É uma instância de uma classe.
+  
+## Classes em Ruby
+- **Exemplos:**
+  ```rb
+  class Computador
+    def liga
+      'Liga o computador'
+    end
+
+    def desliga
+      'Desliga o computador'
+    end
+  end
+
+  computador = Computador.new
+  puts computador.desliga
+  ```
 
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
