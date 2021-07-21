@@ -360,6 +360,10 @@ Gem é um pacote que oferece funcionalidades a fim de resolver uma necessidade e
 ## Pilares (POO)
 - Abstração: Ação de abstrair uma entidade do mundo real e transformá-la em uma classe.
 - Encapsulamento: Ato de dividir o programa em várias partes tornando-o mais flexível, fácil de modificar e incluir novas funcionalidades.
+- Herança: Habilidade de criar uma Classe com características de outra Classe existente. A herança promove o reuso e reaproveitamento de código.
+- Polimorfismo: Capacidade de utilizar um método de diferentes formas para diferentes Objetos.
+- Classe: É uma estrutura que abstrai um conjunto de objetos com características similares. Uma classe determina o comportamento de seus objetos (através de métodos) e os estados possíveis destes objetos por meio de atributos.
+- Objeto: É uma instância de uma classe.
 
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
