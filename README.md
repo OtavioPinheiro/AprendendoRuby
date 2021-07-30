@@ -730,15 +730,76 @@ Lambdas são semelhantes aos Blocks, ou seja, são funções anônimas, porém l
 
   **IMPORTANTE:** É possível passar mais de um lambda para um método.
 
-# Modules
-
+# Modules (Módulos)
+Constituído por Namespace e por Mixins. Módulos são uma coleção de métodos e constantes.
 
 ## Namespace
+```rb
+  module ReverseWorld
+    def self.puts text
+      print text.reverse.to_s
+    end
+  end
 
+  ReverseWorld::puts 'O resultado é'
+  puts 'O resultado é'
+```
 
 ## Mixins
+```rb
+  module ImpressaoDecorada
+    def imprimir text
+      decoracao = '#' * 100
+      puts decoracao
+      puts text
+      puts decoracao
+    end
+  end
 
+  module Pernas
+    include ImpressaoDecorada
 
+    def chute_frontal
+      imprimir 'Chute Frontal'
+    end
+
+    def chute_lateral
+      imprimir 'Chute Lateral'
+    end
+  end
+
+  module Bracos
+    include ImpressaoDecorada
+
+    def jab_de_direita
+      imprirmir 'Jab de direita'
+    end
+
+    def jab_de_esquerda
+      imprirmir 'Jab de esquerda'
+    end
+
+    def gancho
+      imprirmir 'Gancho'
+    end
+
+    class LutadorX
+      include Pernas
+      include Bracos
+    end
+
+    class LutadorY
+      include Pernas
+    end
+
+    lutadorx = LutadorX.new
+    lutadorx.chute_frontal
+    lutadorx.jab_de_direita
+
+    lutadory = LutadorY.new
+    lutadory.chute_lateral
+  end
+```
 
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
