@@ -580,6 +580,28 @@ Atributos ou variáveis de instância, no Ruby são sempre privados e começam c
     puts cachorro.idade
   ```
 
+# Construtores
+Construtores são métodos que especificam determinados valores padrões para um objeto. Em Ruby, os métodos construtores devem ser chamados de `initialize`.
+
+**Exemplo:**
+  ```rb
+    class Pessoa
+      def initialize(nome, idade)
+        @nome = nome
+        @idade = idade
+      end
+
+      def check
+        puts "Instância da classe iniciada com os valores:"
+        puts "Nome = #{@nome}"
+        puts "Idade = #{@idade}"
+      end
+    end
+
+    pessoa = Pessoa.new('Zézinho', 30)
+    pessoa.check
+  ```
+
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
 - Ruby. **Documentação**. Disponível em: https://www.ruby-lang.org/pt/documentation/
