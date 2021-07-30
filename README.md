@@ -547,6 +547,39 @@ O escopo define aonde a variável vai estar disponível dentro do programa. Em R
     usuario.add('Maria')
   ```
 
+# Atributos
+Atributos ou variáveis de instância, no Ruby são sempre privados e começam com `@`, eles só podem ser alterados pelos métodos de um objeto.
+**Exemplo:**
+  ```rb
+    class Cachorro
+      def nome
+        @nome
+      end
+
+      def nome = nome
+        @nome = nome
+      end
+    end
+
+    cachorro = Cachorro.new
+    cachorro.nome = "Pax"
+    puts cachorro.nome
+  ```
+
+  Versão simplificada.
+  ```rb
+    class Cachorro
+      attr_accessor :nome, :idade
+    end
+
+    cachorro = Cachorro.new
+    cachorro.nome = "Pax"
+    puts cachorro.nome
+
+    cachorro.idade = "3 anos"
+    puts cachorro.idade
+  ```
+
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
 - Ruby. **Documentação**. Disponível em: https://www.ruby-lang.org/pt/documentation/
