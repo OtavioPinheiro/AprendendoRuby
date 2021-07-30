@@ -474,7 +474,11 @@ Arquivo 2 que chamará um outro arquivo animal.rb
 **IMPORTANTE:** A ordem dos *require* importa!
 
 # Escopo das variáveis
-
+O escopo define aonde a variável vai estar disponível dentro do programa. Em Ruby existem 4 tipos:
+- **Variável local** - É declarada com a primeira letra do nome em <u>minúscula</u> ou <ins>sublinhado</ins>. Pode ser acessada apenas onde foi criada. Por exemplo, se você definir uma variável local dentro de uma classe ela estará disponível apenas para esta classe, e, se for definida dentro de um método, a variável será acessível apenas dentro deste método e assim por diante.
+- **Variável global** - É declarada usadando prefixo `$`. Pode ser acessada de qualquer lugar do código, porém seu uso é desaconselhável, porque, além de ser visível em qualquer lugar do programa, também pode ser alterada em inúmeros locais, ocasionando dificuldades no rastreamento de bugs.
+- **Variável de classe** - É declarada com o prefixo `@@`. Pode ser acessada em qualquer lugar da classe em que foi declarada e seu valor é compartilhado entre todas as instâncias da classe (objetos).
+- **Variável de instância** - É declara com o prefixo `@`. Semelhante a variável de classe, porém o valor desta variável não é compartilhado entre todas as instâncias de classe (objetos).
 
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
