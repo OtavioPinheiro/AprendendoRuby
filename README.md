@@ -684,7 +684,51 @@ Um bloco pode ser entendido como uma função anônima. É definido entre `do` e
   ```
 
 # Lambda
+Lambdas são semelhantes aos Blocks, ou seja, são funções anônimas, porém lambdas podem ser salvas em variáveis.
 
+**Exemplo:**
+  Forma simples
+  ```rb
+    first_lambda = lambda { puts "lambda" }
+    first_lambda.call
+  ```
+
+  ```rb
+    first_lambda = -> (nomes) { nomes.each { | nome | puts nome } }
+    nomes = ["João", "Maria", "Pedro"]
+    first_lambda.call(nomes)
+  ```
+
+  Lambda de múltiplas linhas
+  ```rb
+    my_lambda = lambda do |nums|
+      index = 0
+      puts "Número atual + Próximo número"
+      nums.each do |num|
+        return if nums[index] == nums.last
+        puts "(#{nums[index]}) + (#{nums[index + 1]})"
+        puts nums[index] + nums[index + 1]
+        index += 1
+      end
+    end
+    nums = [1, 2, 3, 4, 5]
+    my_lambda.call(nums)
+  ```
+
+  Lambda como argumento
+  ```rb
+    def foo(pri_lambda, seg_lambda)
+      pri_lambda.call
+      seg_lambda.call
+    end
+
+    pri_lambda = lambda { puts "Primeiro lambda" }
+    seg_lambda = lambda { puts "Segundo lambda" }
+
+    foo(pri_lambda, seg_lambda)
+  ```
+
+  **IMPORTANTE:** É possível passar mais de um lambda para um método.
 
 # Modules
 
