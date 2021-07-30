@@ -476,9 +476,76 @@ Arquivo 2 que chamará um outro arquivo animal.rb
 # Escopo das variáveis
 O escopo define aonde a variável vai estar disponível dentro do programa. Em Ruby existem 4 tipos:
 - **Variável local** - É declarada com a primeira letra do nome em <u>minúscula</u> ou <ins>sublinhado</ins>. Pode ser acessada apenas onde foi criada. Por exemplo, se você definir uma variável local dentro de uma classe ela estará disponível apenas para esta classe, e, se for definida dentro de um método, a variável será acessível apenas dentro deste método e assim por diante.
+  **Exemplo:**
+  ```rb
+    def foo
+      local = "variável local acessada apenas dentro deste método."
+    end
+
+    foo
+
+    puts local # Erro
+  ```
 - **Variável global** - É declarada usadando prefixo `$`. Pode ser acessada de qualquer lugar do código, porém seu uso é desaconselhável, porque, além de ser visível em qualquer lugar do programa, também pode ser alterada em inúmeros locais, ocasionando dificuldades no rastreamento de bugs.
+  **Exemplo:**
+  ```rb
+    class Bar
+      def foo
+        $global = 0
+        puts $global
+      end
+    end
+
+    class Baz
+      def pep
+        $global += 1
+        puts $global
+      end
+    end
+
+    bar = Bar.new
+    baz = Baz.new
+    bar.foo
+    baz.pep
+    baz.pep
+    puts $global
+  ```
 - **Variável de classe** - É declarada com o prefixo `@@`. Pode ser acessada em qualquer lugar da classe em que foi declarada e seu valor é compartilhado entre todas as instâncias da classe (objetos).
+  **Exemplo:**
+  ```rb
+    class User
+      @@user_count = 0
+      def add(name)
+        puts "User #{name} adicionado"
+        @@user_count += 1
+        puts @@user_count
+      end
+    end
+
+    first_user = User.new
+    first_user.add('João')
+
+    second_user = User.new
+    second_user.add('José')
+  ```
 - **Variável de instância** - É declara com o prefixo `@`. Semelhante a variável de classe, porém o valor desta variável não é compartilhado entre todas as instâncias de classe (objetos).
+  **Exemplo:**
+  ```rb
+    class Usuario
+      def adicionar(nome)
+        @nome = nome
+        puts "Usuário adicionado"
+        boas_vindas
+      end
+
+      def boas_vindas
+        puts "Seja Bem-Vindo, #{@nome}!"
+      end
+    end
+
+    usuario = Usuario.new
+    usuario.add('Maria')
+  ```
 
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
