@@ -445,6 +445,37 @@ Gem é um pacote que oferece funcionalidades a fim de resolver uma necessidade e
   teclado.escrever
   ```
 
+# Require
+O *Require* serve para carregar arquivos criados pelo usuário ou para carregar (baixar) gems (bibliotecas).
+
+**Exemplo:**
+
+Arquivo 1 com nome de `animal.rb`
+```rb
+  class Animal
+    def pular
+      puts 'Toing! tóim! bóim! póim!'
+    end
+
+    def dormir
+      puts 'zZz'
+    end
+  end
+```
+Arquivo 2 que chamará um outro arquivo animal.rb
+```rb
+  require_relative 'animal' # esse require irá procurar o arquivo na mesma pasta
+  # require './animal.rb' esse require irá procurar o arquivo em uma pasta anterior
+
+  animal = Animal.new
+  animal = pular
+```
+
+**IMPORTANTE:** A ordem dos *require* importa!
+
+# Escopo das variáveis
+
+
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
 - Ruby. **Documentação**. Disponível em: https://www.ruby-lang.org/pt/documentation/
