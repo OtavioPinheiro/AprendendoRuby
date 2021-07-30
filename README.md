@@ -602,6 +602,100 @@ Construtores são métodos que especificam determinados valores padrões para um
     pessoa.check
   ```
 
+# Blocks
+Um bloco pode ser entendido como uma função anônima. É definido entre `do` e `end` ou <u>colchetes</u>. Essas funções também podem receber parâmetros.
+
+**Exemplos:**
+  Block simples
+  ```rb
+    5.times { puts "Execução do block!" }
+  ```
+
+  Block com parâmetros
+  ```rb
+    total = 0
+    nums = [1, 2, 3, 4, 5]
+    nums.each {|num| total += num}
+    puts total
+  ```
+
+  Block de múltiplas linhas
+  ```rb
+    foo = {2 => 3, 4 => 5}
+
+    foo.each do |key, value|
+      puts "key = #{key}"
+      puts "value = #{value}"
+      puts "key x value = #{key * value}"
+      puts "---"
+    end
+  ```
+
+  Block como parâmetro
+  ```rb
+    def foo
+      yield # Executa o block que foi passado como parâmetro
+      yield
+    end
+
+    foo { puts "Executar o block" }
+  ```
+
+  ```rb
+    def foo
+      if block_given?
+        yield
+      else
+        puts "Sem parâmetro do tipo block"
+      end
+    end
+
+    foo
+    foo { puts "Com parâmetro do tipo bloco" }
+  ```
+
+  ```rb
+    def foo(nome, &block)
+      @nome = nome
+      block.call
+    end
+
+    foo('Leonardo') { puts "Olá #{@nome}" }
+  ```
+
+  **IMPORTANTE:** Só é possível passar um block por método.
+
+  ```rb
+    def foo(numeros, &block)
+      if block_given?
+        numeros.each do |key, value|
+          block.call(key, value)
+        end
+      end
+    end
+
+    numeros = { 2 => 2, 3 => 3, 4 => 4 }
+
+    foo(numeros) do |key, value|
+      puts "#{key} x #{value} = #{key * value}"
+      puts "#{key} + #{value} = #{key + value}"
+      puts "-----"
+    end
+  ```
+
+# Lambda
+
+
+# Modules
+
+
+## Namespace
+
+
+## Mixins
+
+
+
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
 - Ruby. **Documentação**. Disponível em: https://www.ruby-lang.org/pt/documentation/
