@@ -801,6 +801,9 @@ Constituído por Namespace e por Mixins. Módulos são uma coleção de métodos
   end
 ```
 
+# Regex
+Regex ou expressões regulares são notações para apresentar padrões em strings, elas servem para validar entradas de dados ou fazer busca e extração de informações em texto.
+
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
 - Ruby. **Documentação**. Disponível em: https://www.ruby-lang.org/pt/documentation/
