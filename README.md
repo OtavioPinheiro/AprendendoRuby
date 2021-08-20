@@ -802,7 +802,29 @@ Constituído por Namespace e por Mixins. Módulos são uma coleção de métodos
 ```
 
 # Regex
-Regex ou expressões regulares são notações para apresentar padrões em strings, elas servem para validar entradas de dados ou fazer busca e extração de informações em texto.
+Regex ou expressões regulares são notações para apresentar padrões em strings, elas servem para validar entradas de dados ou fazer busca e extração de informações em texto. As formas mais comuns de se criar regex dentro do *Ruby* são:
+- Entre barras. `/regexp/`
+- Utilizando *format specifier*: `%r{regexp}`
+- Utilizando uma classe: `Regexp.new('regexp')`
+
+**Exemplos de uso:**
+1.
+```ruby
+'teste' =~ /te/
+/ol/ =~ 'olá'
+```
+
+2.
+```ruby
+frase = "Bom dia grupo!"
+tem = /dia/.match(frase)
+
+# retornar a palavras anterior a palavra identificada
+tem.pre_match
+
+# retornar a palavra posterior a palavra identificada
+tem.post_match
+```
 
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
