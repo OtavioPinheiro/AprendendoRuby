@@ -886,6 +886,13 @@ Em *Ruby* não há, nativamente, classes abstratas ou interfaces, mas podemos im
 
 [Exemplo de uso](./classe_abstrata/exemplo_classeAbstrata.rb)
 
+# Métodos privados e protegidos
+Por padrão todos os métodos definidos são públicos. Isso significa que eles podem ser acessados por qualquer um. Há outros dois tipos de métodos, privado e protegido.
+
+Os métodos privados (*private*) só podem ser chamados pela classe que o criou, nem mesmo a instância (*self* está incluído) de um objeto da classe pode chamá-lo. Para ter acesso a esse método é necessário criar outro método, de preferência público, que chama o método privado e, ai sim, o método privado poderá ser usado de fora da classe. [Exemplo](./private.rb)
+
+Os métodos protegidos (*protected*), assim como os privados, não podem ser chamados de fora da classe que os criou, mas podem ser chamados por instâncias da classe. [Exemplo](./protected.rb)
+
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
 - Ruby. **Documentação**. Disponível em: https://www.ruby-lang.org/pt/documentation/
