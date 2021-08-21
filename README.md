@@ -829,6 +829,39 @@ tem.post_match
 /\+\d{2}-\d{2}-\d{4}-\d{4}/.match("+15-11-3333-2222")
 /\d{1,}/.match('1234567890')
 ```
+
+# Classe *Time*
+O *Ruby* possui uma classe *Time* que é utilizada para representar as datas e horas.
+
+**Exemplos de uso:**
+
+```ruby
+# Retornar a data e hora do exato instante em que for executado.
+# Támbem é assim que é instanciada a classe Time
+time = Time.now
+
+# Retorna o dia
+puts time.day
+
+# Retorna o mês
+puts time.month
+
+# Retorna o ano
+puts time.year
+
+# Retorna uma string formatada como dia/mês/ano
+time.strftime('%d/%m/%y')
+
+# Retorna uma string formatada como mês/dia/ano
+time.strftime('%D')
+
+# Retorna uma string informando os minutos atuais
+time.strftime('%M')
+
+# Verificações
+puts time.saturday?
+```
+
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
 - Ruby. **Documentação**. Disponível em: https://www.ruby-lang.org/pt/documentation/
