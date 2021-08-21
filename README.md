@@ -867,8 +867,28 @@ puts time.saturday?
 
 **Exemplo:** [Exemplo](./metodo_missing.rb)
 
+# *SELF*
+Em *Ruby*, *self* é uma variável especial que aponta para o objeto atual.
+
+**Exemplos:**
+1. [Exemplo1](./self/self_01.rb)
+2. [Exemplo2](./self/self_02.rb)
+3. [Exemplo3](./self/self_03.rb)
+
+**Importante:** Quando a palavra *self* aparecer antes do nome de um método, a classe não precisará ser instanciada para poder usar o método ([Exemplo2](./self/self_02.rb)).
+
+# Classes Abstratas
+Em *Ruby* não há, nativamente, classes abstratas ou interfaces, mas podemos implementar algo para simular o comportamento. Recapitulando, interfaces são classes abstratas nas quais todos os métodos são abstratos, já classes abstratas são classes nas quais possuem um ou mais métodos abstratos. Quando se utiliza as interfaces é necessário implementar todos os métodos da interface.
+
+[Referência para classes abstratas em Ruby](https://mauricioszabo.wordpress.com/2010/05/25/da-para-criar-classes-abstratas-em-ruby/)
+
+[Código da classe abstrata](./classe_abstrata/abstract.rb)
+
+[Exemplo de uso](./classe_abstrata/exemplo_classeAbstrata.rb)
+
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
 - Ruby. **Documentação**. Disponível em: https://www.ruby-lang.org/pt/documentation/
 - Leonardo Scorza. **Curso de Ruby**. Disponível em: https://www.youtube.com/playlist?list=PLdDT8if5attEOcQGPHLNIfnSFiJHhGDOZ
 - Ruby Documentation. **Documentação Ruby**. Disponível em: https://www.rubydoc.info/
+- Maurício Szabo. **Dá para criar classes abstratas em Ruby?**. Disponível em: https://mauricioszabo.wordpress.com/2010/05/25/da-para-criar-classes-abstratas-em-ruby/
