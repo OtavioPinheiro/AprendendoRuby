@@ -808,14 +808,11 @@ Regex ou expressões regulares são notações para apresentar padrões em strin
 - Utilizando uma classe: `Regexp.new('regexp')`
 
 **Exemplos de uso:**
-1.
+
 ```ruby
 'teste' =~ /te/
 /ol/ =~ 'olá'
-```
 
-2.
-```ruby
 frase = "Bom dia grupo!"
 tem = /dia/.match(frase)
 
@@ -824,8 +821,14 @@ tem.pre_match
 
 # retornar a palavra posterior a palavra identificada
 tem.post_match
-```
 
+# Procura por dígitos
+/\d/.match("412")
+
+# Repetições de padrão
+/\+\d{2}-\d{2}-\d{4}-\d{4}/.match("+15-11-3333-2222")
+/\d{1,}/.match('1234567890')
+```
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
 - Ruby. **Documentação**. Disponível em: https://www.ruby-lang.org/pt/documentation/
