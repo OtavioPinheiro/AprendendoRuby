@@ -862,6 +862,11 @@ time.strftime('%M')
 puts time.saturday?
 ```
 
+# Método *MISSING*
+É utilizado para interceptar chamadas a métodos inexistentes.
+
+**Exemplo:** [Exemplo](./metodo_missing.rb)
+
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
 - Ruby. **Documentação**. Disponível em: https://www.ruby-lang.org/pt/documentation/
