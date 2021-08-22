@@ -893,6 +893,11 @@ Os métodos privados (*private*) só podem ser chamados pela classe que o criou,
 
 Os métodos protegidos (*protected*), assim como os privados, não podem ser chamados de fora da classe que os criou, mas podem ser chamados por instâncias da classe. [Exemplo](./protected.rb)
 
+# Leitura de arquivos
+É possível ler arquivos em Ruby usando a classe *File*.
+
+[Exemplo](./leitura_de_arquivos/read.rb)
+
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
 - Ruby. **Documentação**. Disponível em: https://www.ruby-lang.org/pt/documentation/
