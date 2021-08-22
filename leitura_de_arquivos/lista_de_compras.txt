@@ -3,3 +3,7 @@ uvas
 pães
 biscoitos
 refrigerantes
+maracujá
+arroz
+feijão
+carne
