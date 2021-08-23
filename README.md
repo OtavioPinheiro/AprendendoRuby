@@ -898,6 +898,13 @@ Os métodos protegidos (*protected*), assim como os privados, não podem ser cha
 
 [Exemplo](./leitura_de_arquivos/read.rb)
 
+# Chamadas Web
+Em *Ruby* é possível realizar chamadas web através da biblioteca `Net::HTTP`. No exemplo a seguir o código realizar um download da página web informada em `Net::HTTP.get()` dentro do caminho informado em `File.open()`.
+
+[Exemplo de chamadas de sites http](./chamadas_web/chamadasWeb.rb)
+
+[Chamadas Web HTTPS](./chamadas_web/chamadasWebHttps.rb)
+
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
 - Ruby. **Documentação**. Disponível em: https://www.ruby-lang.org/pt/documentation/
