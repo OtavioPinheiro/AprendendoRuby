@@ -3,7 +3,31 @@ Aprendendo Ruby por meio de vídeos tutoriais.
 
 # Tópicos
 - [O que é Ruby?](#o-que-é-ruby)
-- [Começando o estudo](#começando-o-estudo)
+- [Boas Práticas](#boas-práticas)
+- [Variáveis](#variáveis)
+- [Receber informações do usuário](#receber-informações-do-usuário)
+- [Converter para inteiro ou para float](#converter-para-inteiro-ou-para-float)
+- [Condicionais](#condicionais)
+- [Iterações](#iterações)
+- [Collections](#collections)
+- [Métodos](#métodos)
+- [Gems](#gems)
+- [POO](#programação-orientada-a-objeto)
+- [Require](#require)
+- [Escopo das variáveis](#escopo-das-variáveis)
+- [Atributos](#atributos)
+- [Construtores](#construtores)
+- [Blocks](#blocks)
+- [Lambda](#lambda)
+- [Modules](#modules-módulos)
+- [Regex](#regex)
+- [Classe Time](#classe-time)
+- [Método Missing](#metodo_missing)
+- [Self](#self)
+- [Classes Abstratas](#classes-abstratas)
+- [Leitura de arquivos](#leitura-de-arquivos)
+- [Chamadas Web](#chamadas-web)
+- [Referências](#referências)
   
 # O que é Ruby?
 A linguagem Ruby é uma linguagem dinâmica, *open source* com foco na simplicidade e na produtividade. Tem uma sintaxe elegante de leitura natural e fácil escrita. O criador da linguagem Ruby é Yukihiro "Matz" Matsumoto.
@@ -23,7 +47,7 @@ ruby arquivo.rb
 
 # Variáveis
 Variáveis em Ruby podem ser declaradas das seguintes formas:
-```
+```rb
   nome_do_personagem = "Snow"
   idade_do_personagem = "20"
 ```
