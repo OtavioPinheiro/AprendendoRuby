@@ -908,7 +908,28 @@ Em *Ruby* é possível realizar chamadas web através da biblioteca `Net::HTTP`.
 [Chamadas usando método POST](./chamadas_web/chamadas_post.rb)
 
 # Web Scraping
+*Web Scraping* é uma forma de mineração que permite a extração de dados de sites da web convertendo-os em informações estruturadas para posterior análise. Em *Ruby* utilizamos a biblioteca chamada `Nokogiri` para encontrar informações dentro de estruturas *HTML* dos sites. Para utilizar essa biblioteca é necessário instala-la pelo comando `gem install nokogiri`.
 
+**Exemplos:**
+
+```rb
+require 'nokogiri'
+require 'net/http'
+
+https = Net::HTTP.new('uol.com.br', 443)
+https.use_ssl = true
+
+response = https.get('/')
+
+doc = Nokogiri::HTML(response.body)
+
+h1 = doc.at('h1')
+puts h1.content
+
+h3_a = doc.at('h3 a')
+puts h3_a.content
+puts h3_a['href']
+```
 
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
