@@ -929,6 +929,12 @@ puts h1.content
 h3_a = doc.at('h3 a')
 puts h3_a.content
 puts h3_a['href']
+
+doc.search('h3 a').each do |a|
+  puts a.content
+  puts a['href']
+  puts ''
+end
 ```
 
 # Referências
