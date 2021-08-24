@@ -218,9 +218,11 @@ Tipos de collections:
 - **Hashes**
   A diferença entre *Hashes* e *Arrays* é quando se trata de *Hash*, não acessamos os elementos passando o índice e sim passando o valor, assim como são os dicionários em Python ou os JSON em JavaScript.
   - Declaração:
-    - `capitais = Hash.new` ou `capitais = {}`
+    - `capitais = Hash.new`
+    - `capitais = {}`
   - Atribuição:
     - `capitais = {acre: 'Rio Branco', sao_paulo: 'São Paulo'}`
+    - `capitais = {acre => "Rio Branco", sao_paulo => "São Paulo"}`
   - Adicionando novos elementos:
     - `capitais[:minas_gerais] = "Belo Horizonte"`
   - Funções úteis:
