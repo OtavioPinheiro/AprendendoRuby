@@ -905,6 +905,11 @@ Em *Ruby* é possível realizar chamadas web através da biblioteca `Net::HTTP`.
 
 [Chamadas Web HTTPS](./chamadas_web/chamadasWebHttps.rb)
 
+[Chamadas usando método POST](./chamadas_web/chamadas_post.rb)
+
+# Web Scraping
+
+
 # Referências
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
 - Ruby. **Documentação**. Disponível em: https://www.ruby-lang.org/pt/documentation/
