@@ -980,6 +980,24 @@ doc.search('h3 a').each do |a|
 end
 ```
 
+# Lidando com erros e exceções
+Em *Ruby* é possível fazer o tratamento de erros e exceções para a mensagem retornada para o usuário seja mais amigável. Esse tratamento é feito colocando o código possível de erro ou exceção dentro do bloco `begin` e, em seguida, no bloco `rescue`, informar o tipo de erro esperado e dentro do bloco colocar o tratamento e ser feito, por fim, terminar com `end`. É importante informar o tipo de erro esperado logo após de `rescue`, caso contrário, todo e qualquer tipo de erro que acontecer no bloco `begin` será capturado no bloco `rescue`.
+
+**Exemplos:**
+
+```rb
+numeros_da_mega = [12, 1, 43, 10, 5, 22, 11]
+
+begin
+  numeros_da_mega["vencedor"]
+  num = 10/0
+rescue ZeroDivisionError => e
+  puts e
+rescue TypeError => e
+  puts e
+end
+```
+
 # Referências
 - Leonardo Scorza. **Curso de Ruby**. Disponível em: https://www.youtube.com/playlist?list=PLdDT8if5attEOcQGPHLNIfnSFiJHhGDOZ
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
