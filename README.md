@@ -998,6 +998,13 @@ rescue TypeError => e
 end
 ```
 
+# Criando classes e métodos
+Usando a palavra reservada `class`, é possível criar classes em *Ruby*. Se quisermos definir um método inicializador, ou seja, para criar instâncias da classe (objetos) é necessário, primeiro, passar os argumentos, podemos implementar isso usando o método especial `initialize`.
+
+[Exemplo de criação de uma classe](./classes/classe.rb)
+
+[Exemplo de uma classe com initialize](./classes/initialize.rb)
+
 # Referências
 - Leonardo Scorza. **Curso de Ruby**. Disponível em: https://www.youtube.com/playlist?list=PLdDT8if5attEOcQGPHLNIfnSFiJHhGDOZ
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
