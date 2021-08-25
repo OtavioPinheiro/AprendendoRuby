@@ -981,8 +981,8 @@ end
 ```
 
 # Referências
+- Leonardo Scorza. **Curso de Ruby**. Disponível em: https://www.youtube.com/playlist?list=PLdDT8if5attEOcQGPHLNIfnSFiJHhGDOZ
 - Free Code Camp. **Ruby Programming Language - Full Course**. Disponível em: https://www.youtube.com/watch?v=t_ispmWmdjY
 - Ruby. **Documentação**. Disponível em: https://www.ruby-lang.org/pt/documentation/
-- Leonardo Scorza. **Curso de Ruby**. Disponível em: https://www.youtube.com/playlist?list=PLdDT8if5attEOcQGPHLNIfnSFiJHhGDOZ
 - Ruby Documentation. **Documentação Ruby**. Disponível em: https://www.rubydoc.info/
 - Maurício Szabo. **Dá para criar classes abstratas em Ruby?**. Disponível em: https://mauricioszabo.wordpress.com/2010/05/25/da-para-criar-classes-abstratas-em-ruby/
