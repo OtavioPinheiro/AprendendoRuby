@@ -924,6 +924,23 @@ Os métodos protegidos (*protected*), assim como os privados, não podem ser cha
 
 [Exemplo](./leitura_de_arquivos/read.rb)
 
+## Tabela dos modos de leitura e escrita em arquivos em Ruby.
+
+| Mode |  Meaning                                               |
+|------|--------------------------------------------------------|
+| "r"  | Read-only, starts at beginning of file  (default mode).|
+| "r+" | Read-write, starts at beginning of file.               |
+| "w"  | Write-only, truncates existing file to zero length or creates a new file for writing. |
+| "w+" | Read-write, truncates existing file to zero length or creates a new file for reading and writing. |
+| "a"  | Write-only, starts at end of file if file exists, otherwise creates a new file for writing. |
+| "a+" | Read-write, starts at end of file if file exists, otherwise creates a new file for reading and writing. |
+| "b"  | Binary file mode (may appear with any of the key letters listed above). Suppresses EOL <-> CRLF conversion on Windows. And sets external encoding to ASCII-8BIT unless explicitly specified. |
+| "t"  | Text file mode (may appear with any of the key letters listed above except "b"). |
+
+[Referência](https://stackoverflow.com/questions/3682359/what-are-the-ruby-file-open-modes-and-options)
+
+[Documentação do Ruby falando a respeito das opções e modos de leitura e escrita](https://www.rubydoc.info/stdlib/core/IO:initialize#:~:text=Ruby%20allows%20the%20following%20open,a%20new%20file%20for%20writing.)
+
 # Chamadas Web
 Em *Ruby* é possível realizar chamadas web através da biblioteca `Net::HTTP`. No exemplo a seguir o código realizar um download da página web informada em `Net::HTTP.get()` dentro do caminho informado em `File.open()`.
 
